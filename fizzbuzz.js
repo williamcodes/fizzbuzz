@@ -1,5 +1,5 @@
-const fizzbuzz = (n) => {
-  return 1
+const fizzbuzz = () => {
+  return
 }
 
-module.exports = fizzbuzz
+export default fizzbuzz
