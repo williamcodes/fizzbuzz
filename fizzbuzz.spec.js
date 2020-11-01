@@ -41,3 +41,9 @@ test('allows x to move again', () => {
     ['','',''],
   ])
 })
+
+test('does not allow o to override x', () => {
+  const tictactoe = new TicTacToe()
+  tictactoe.move(0,0)
+  expect(() => tictactoe.move(0,0)).toThrow()
+})
