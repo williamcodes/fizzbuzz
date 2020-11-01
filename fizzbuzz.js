@@ -1,22 +1,29 @@
 class TicTacToe {
   constructor() {
     this._board = [
-      [' ',' ',' '],
-      [' ',' ',' '],
-      [' ',' ',' '],
+      ['','',''],
+      ['','',''],
+      ['','',''],
     ]
     this._activeSymbol = 'x'
   }
 
   board() {
-    console.log(this._board.map(row => row.join('|')).join("\n"))
     return this._board
   }
 
-  move(x,y) {
-    this._board[x][y] = this._activeSymbol
+  switchSymbol() {
     if (this._activeSymbol === 'x') {
-      this._activeSymbol = 'o'}
+      this._activeSymbol = 'o'
+      return 'x'
+    } else {
+      this._activeSymbol = 'x'
+      return 'o'
+    }
+  }
+
+  move(x,y) {
+    this._board[x][y] = this.switchSymbol()
   }
 }
 

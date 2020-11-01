@@ -30,7 +30,7 @@ test('allows o to move', () => {
   ])
 })
 
-test('allows x to move', () => {
+test('allows x to move again', () => {
   const tictactoe = new TicTacToe()
   tictactoe.move(0,0)
   tictactoe.move(1,1)
